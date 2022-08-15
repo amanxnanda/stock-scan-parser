@@ -7,6 +7,7 @@ environment:
   sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
+  http: ^0.13.5
   stock_scan_domain:
     path: ../domain
 
