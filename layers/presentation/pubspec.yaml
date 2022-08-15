@@ -17,6 +17,8 @@ dependencies:
     path: ../domain
 
 dev_dependencies:
+  bloc_test: ^9.1.0
   flutter_test:
     sdk: flutter
+  mocktail: ^0.3.0
   very_good_analysis: ^3.0.1
