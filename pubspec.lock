@@ -364,6 +364,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.10.0"
+  stock_scan_data:
+    dependency: "direct main"
+    description:
+      path: "layers/data"
+      relative: true
+    source: path
+    version: "1.0.0+1"
   stock_scan_domain:
     dependency: "direct main"
     description:
