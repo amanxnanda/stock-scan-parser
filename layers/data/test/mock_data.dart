@@ -211,3 +211,52 @@ const variableCriteriaMockJson = r'''
   }
 }
 ''';
+
+const stockMockData = r'''
+{
+        "id": 5,
+        "name": "RSI Overbought",
+        "tag": "Bearish",
+        "color": "red",
+        "criteria": [
+            {
+              "type": "plain_text",
+              "text": "Sort - %price change in descending order"
+            },
+            {
+              "type": "variable",
+              "text": "Today’s open < yesterday’s low by $1 %",
+              "variable": {
+                "$1": {
+                  "type": "value",
+                  "values": [
+                    -3,
+                    -1,
+                    -2,
+                    -5,
+                    -10
+                  ]
+                },
+                "$2": {
+                  "type": "value",
+                  "values": [
+                      1.5,
+                      0.5,
+                      1,
+                      2,
+                      3
+                  ]
+                },
+                "$3": {
+                  "type": "indicator",
+                  "study_type": "rsi",
+                  "parameter_name": "period",
+                  "min_value": 1,
+                  "max_value": 99,
+                  "default_value": 14
+                }
+              }
+            }
+        ]
+    }
+''';
