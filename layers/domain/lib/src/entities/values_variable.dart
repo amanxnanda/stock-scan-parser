@@ -15,7 +15,7 @@ class ValuesVariable extends Equatable implements Variable {
   final String id;
 
   /// values
-  final List<int> values;
+  final List<num> values;
 
   @override
   VariableType get type => VariableType.value;
