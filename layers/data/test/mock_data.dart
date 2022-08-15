@@ -167,3 +167,47 @@ const valuesVariableMockJson = '''
   "values": [1.5, 0.5, 1, 2, 3]
 }
 ''';
+
+const plainTextCriteriaMockJson = '''
+{
+  "type": "plain_text",
+  "text": "Sort - %price change in descending order"
+}
+''';
+
+const variableCriteriaMockJson = r'''
+{
+  "type": "variable",
+  "text": "Today’s open < yesterday’s low by $1 %",
+  "variable": {
+    "$1": {
+      "type": "value",
+      "values": [
+        -3,
+        -1,
+        -2,
+        -5,
+        -10
+      ]
+    },
+    "$2": {
+      "type": "value",
+      "values": [
+          1.5,
+          0.5,
+          1,
+          2,
+          3
+      ]
+    },
+    "$3": {
+      "type": "indicator",
+      "study_type": "rsi",
+      "parameter_name": "period",
+      "min_value": 1,
+      "max_value": 99,
+      "default_value": 14
+     }
+  }
+}
+''';

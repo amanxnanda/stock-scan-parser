@@ -1,4 +1,3 @@
-import 'package:stock_scan_data/src/models/indicator_variable_model.dart';
 import 'package:stock_scan_data/src/models/models.dart';
 import 'package:stock_scan_domain/domain.dart';
 
