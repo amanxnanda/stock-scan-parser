@@ -27,7 +27,7 @@ class StockRepositoryImpl implements StockRepository {
     final response = await _httpClient.get(stockRequest);
 
     if (response.statusCode != 200) {
-      throw StocksFetchRequestFailure();
+      throw StocksFetchRequestFailure(response.statusCode);
     }
 
     final stocksList = jsonDecode(response.body) as List;
