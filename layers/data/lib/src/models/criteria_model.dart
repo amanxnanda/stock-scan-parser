@@ -13,7 +13,7 @@ class CriteriaModel extends Criteria {
   });
 
   /// {@macro criteria}
-  factory CriteriaModel.fromJson(Map<String, dynamic> map) {
+  factory CriteriaModel.fromMap(Map<String, dynamic> map) {
     final isVariable = (map['type'] as String) == 'variable';
 
     final type = isVariable ? CriteriaType.variable : CriteriaType.plainText;
@@ -25,7 +25,7 @@ class CriteriaModel extends Criteria {
               final variableMap = e.value as Map<String, dynamic>;
               final isIndicator = (variableMap['type'] as String) == 'indicator';
 
-              return isIndicator ? IndicatorVariableModel.fromJson(e.key, variableMap) : ValuesVariableModel.fromJson(e.key, variableMap);
+              return isIndicator ? IndicatorVariableModel.fromMap(e.key, variableMap) : ValuesVariableModel.fromMap(e.key, variableMap);
             })
             .cast<Variable>()
             .toList()

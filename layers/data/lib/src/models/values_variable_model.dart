@@ -10,8 +10,8 @@ class ValuesVariableModel extends ValuesVariable {
   });
 
   /// {@macro values_variable}
-  factory ValuesVariableModel.fromJson(String id, Map<String, dynamic> json) => ValuesVariableModel._(
+  factory ValuesVariableModel.fromMap(String id, Map<String, dynamic> json) => ValuesVariableModel._(
         id: id,
-        values: json['values'] as List<int>,
+        values: List.castFrom<dynamic, num>(json['values'] as List<dynamic>),
       );
 }

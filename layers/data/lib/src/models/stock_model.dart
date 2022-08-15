@@ -14,13 +14,13 @@ class StockModel extends Stock {
   });
 
   /// {@macro stock}
-  factory StockModel.fromJson(Map<String, dynamic> json) {
+  factory StockModel.fromMap(Map<String, dynamic> json) {
     return StockModel._(
       id: json['id'] as int,
       name: json['name'] as String,
       tag: json['tag'] as String,
       color: StockColor.values.firstWhere((c) => c.name == json['color'] as String),
-      criterias: (json['criteria'] as List<dynamic>).map((e) => CriteriaModel.fromJson(e as Map<String, dynamic>)).toList(),
+      criterias: (json['criteria'] as List<dynamic>).map((e) => CriteriaModel.fromMap(e as Map<String, dynamic>)).toList(),
     );
   }
 }

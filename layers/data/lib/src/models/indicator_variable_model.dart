@@ -14,7 +14,7 @@ class IndicatorVariableModel extends IndicatorVariable {
   });
 
   /// {@macro indicator_variable}
-  factory IndicatorVariableModel.fromJson(String id, Map<String, dynamic> json) {
+  factory IndicatorVariableModel.fromMap(String id, Map<String, dynamic> json) {
     return IndicatorVariableModel._(
       id: id,
       studyType: StudyType.values.firstWhere(
