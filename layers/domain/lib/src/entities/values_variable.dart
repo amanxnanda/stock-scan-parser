@@ -9,10 +9,15 @@ class ValuesVariable extends Equatable implements Variable {
   const ValuesVariable({
     required this.values,
     required this.id,
+    required this.defaultValue,
   });
 
   /// id
+  @override
   final String id;
+
+  @override
+  final num defaultValue;
 
   /// values
   final List<num> values;

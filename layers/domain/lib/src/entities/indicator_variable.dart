@@ -16,6 +16,7 @@ class IndicatorVariable extends Equatable implements Variable {
   });
 
   /// The id of the variable.
+  @override
   final String id;
 
   /// The type of the study.
@@ -31,6 +32,7 @@ class IndicatorVariable extends Equatable implements Variable {
   final int maxValue;
 
   /// The default value of the parameter.
+  @override
   final int defaultValue;
 
   @override
