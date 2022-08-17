@@ -1,5 +1,6 @@
 import 'package:dotted_line/dotted_line.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:stock_scan_domain/domain.dart';
 import 'package:stock_scan_presentation/presentation.dart';
 
@@ -16,7 +17,13 @@ class StockTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) => InkWell(
         borderRadius: const BorderRadius.all(Radius.circular(10)),
-        onTap: () {},
+        onTap: () => context.goNamed(
+          RouteNames.details,
+          params: {
+            'name': stock.name,
+          },
+          extra: stock,
+        ),
         child: Padding(
           padding: Spacing.medium.x + Spacing.small.y,
           child: Column(
