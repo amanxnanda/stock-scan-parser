@@ -1,4 +1,4 @@
-part of 'stocks_bloc.dart';
+part of 'stocks_cubit.dart';
 
 /// {@template stocks_state}
 /// The stocks state.

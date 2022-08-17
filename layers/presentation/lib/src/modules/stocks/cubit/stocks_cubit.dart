@@ -3,24 +3,22 @@ import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 import 'package:stock_scan_domain/domain.dart';
 
-part 'stocks_event.dart';
 part 'stocks_state.dart';
 
-/// {@template stocks_bloc}
-/// The stocks bloc.
+/// {@template stocks_cubit}
+/// The stocks cubit.
 /// {@endtemplate}
-class StocksBloc extends Bloc<StocksEvent, StocksState> {
-  /// {@macro stocks_bloc}
-  StocksBloc({
+class StocksCubit extends Cubit<StocksState> {
+  /// {@macro stocks_cubit}
+  StocksCubit({
     required StockRepository stockRepository,
   })  : _stockRepository = stockRepository,
-        super(const StocksInitial()) {
-    on<StocksFetched>(_onFetched);
-  }
+        super(const StocksInitial());
 
   final StockRepository _stockRepository;
 
-  Future<void> _onFetched(StocksFetched event, Emitter<StocksState> emit) async {
+  /// Fetches the stocks.
+  Future<void> fetch() async {
     try {
       final stocks = await _stockRepository.fetch();
 

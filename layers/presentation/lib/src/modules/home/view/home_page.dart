@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:stock_scan_domain/domain.dart';
+import 'package:stock_scan_presentation/presentation.dart';
 import 'package:stock_scan_presentation/src/modules/home/view/widgets/widgets.dart';
-import 'package:stock_scan_presentation/src/modules/stocks/bloc/stocks_bloc.dart';
 
 /// {@template home_page}
 /// The home page.
@@ -13,9 +13,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => BlocProvider(
-        create: (context) => StocksBloc(
+        create: (context) => StocksCubit(
           stockRepository: context.read<StockRepository>(),
-        )..add(StocksFetched()),
+        )..fetch(),
         child: const HomeView(),
       );
 }

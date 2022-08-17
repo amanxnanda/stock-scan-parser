@@ -1,1 +1,1 @@
-export 'bloc/stocks_bloc.dart';
+export 'cubit/stocks_cubit.dart';
