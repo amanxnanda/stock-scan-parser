@@ -45,7 +45,7 @@ class StockTile extends StatelessWidget {
                 child: Text(
                   stock.tag,
                   style: TextStyle(
-                    color: stock.color.color,
+                    color: Color(stock.color.colorHash),
                   ),
                 ),
               ),
@@ -62,16 +62,4 @@ class StockTile extends StatelessWidget {
           ),
         ),
       );
-}
-
-extension on StockColor {
-  /// Returns the color of the stock.
-  Color get color {
-    switch (this) {
-      case StockColor.green:
-        return Colors.green;
-      case StockColor.red:
-        return Colors.red;
-    }
-  }
 }
