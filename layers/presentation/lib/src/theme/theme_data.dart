@@ -13,6 +13,6 @@ final kThemeData = ThemeData.dark().copyWith(
   ),
   textTheme: Typography.englishLike2021.apply(
     fontSizeFactor: 1.sp,
-    bodyColor: Colors.black,
+    bodyColor: Colors.white,
   ),
 );

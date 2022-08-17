@@ -39,12 +39,7 @@ class StockTile extends StatelessWidget {
                     size: Spacing.tiny.value,
                   ),
                   Spacing.small.xBox,
-                  Text(
-                    stock.name,
-                    style: const TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
+                  Text(stock.name),
                 ],
               ),
               Padding(
