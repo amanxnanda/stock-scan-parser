@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// The default theme data.
-final kThemeData = ThemeData(
+final kThemeData = ThemeData.dark().copyWith(
   primaryColor: Colors.blue,
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.white,

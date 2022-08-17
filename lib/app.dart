@@ -17,7 +17,7 @@ class App extends StatelessWidget {
             routerDelegate: router.routerDelegate,
             routeInformationProvider: router.routeInformationProvider,
             theme: kThemeData,
-            themeMode: ThemeMode.light,
+            themeMode: ThemeMode.dark,
           ),
         ),
       );
