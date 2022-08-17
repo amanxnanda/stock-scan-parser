@@ -7,4 +7,7 @@ class RouteNames {
 
   /// The route name of the details screen.
   static const String details = 'details';
+
+  /// The route name of the variables screen.
+  static const String variables = 'variables';
 }

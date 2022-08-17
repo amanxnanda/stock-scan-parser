@@ -21,6 +21,16 @@ final GoRouter router = GoRouter(
           builder: (_, state) => DetailsView(
             stock: state.extra! as Stock,
           ),
+          routes: [
+            GoRoute(
+              name: RouteNames.variables,
+              path: 'variables',
+              builder: (_, state) => VariablesView(
+                variable: state.extra! as Variable,
+              ),
+             
+            ),
+          ],
         ),
       ],
     ),
