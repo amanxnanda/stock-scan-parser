@@ -36,7 +36,7 @@ class IndicatorVariable extends Equatable implements Variable {
   final int defaultValue;
 
   @override
-  VariableType get type => VariableType.value;
+  VariableType get type => VariableType.indicator;
 
   @override
   List<Object> get props => [
