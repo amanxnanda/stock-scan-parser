@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:stock_scan_domain/domain.dart' as domain;
 import 'package:stock_scan_presentation/presentation.dart';
 
@@ -28,9 +29,10 @@ class _CriteriaState extends State<Criteria> with domain.ParsingMixin {
           color: context.primaryColor,
         ),
         recognizer: TapGestureRecognizer()
-          ..onTap = () {
-            // Navigate to the variable.
-          },
+          ..onTap = () => context.goNamed(
+                RouteNames.variables,
+                extra: variable,
+              ),
       );
 
   RichText _convert(BuildContext context) {
