@@ -17,7 +17,7 @@ final GoRouter router = GoRouter(
       routes: [
         GoRoute(
           name: RouteNames.details,
-          path: 'details/:name',
+          path: 'details',
           builder: (_, state) => DetailsView(
             stock: state.extra! as Stock,
           ),

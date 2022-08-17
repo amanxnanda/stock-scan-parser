@@ -11,5 +11,9 @@ class VariablesView extends StatelessWidget {
   final Variable variable;
 
   @override
-  Widget build(BuildContext context) => Container();
+  Widget build(BuildContext context) {
+    print(variable.runtimeType);
+
+    return Container();
+  }
 }
