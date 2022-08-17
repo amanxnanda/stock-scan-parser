@@ -11,4 +11,4 @@ jobs:
       - uses: subosito/flutter-action@v1
       - uses: bluefireteam/flutter-gh-pages@v7
         with:
-          customArgs: --flavor production --target lib/main_production.dart
+          customArgs: --target lib/main_production.dart
