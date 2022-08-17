@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) => BlocProvider(
         create: (context) => StocksBloc(
           stockRepository: context.read<StockRepository>(),
-        ),
+        )..add(StocksFetched()),
         child: const HomeView(),
       );
 }
