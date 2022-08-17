@@ -7,3 +7,9 @@ enum StudyType {
   /// Commodity Channel Index
   cci,
 }
+
+/// label extension
+extension StudyTypeExtension on StudyType {
+  /// Returns the label of the study type.
+  String get label => name.toUpperCase();
+}
