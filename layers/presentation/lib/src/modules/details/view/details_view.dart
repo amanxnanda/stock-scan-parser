@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stock_scan_domain/domain.dart';
+import 'package:stock_scan_domain/domain.dart' show Stock;
 import 'package:stock_scan_presentation/presentation.dart';
 import 'package:stock_scan_presentation/src/modules/details/view/widgets/widgets.dart';
 
@@ -19,8 +19,19 @@ class DetailsView extends StatelessWidget {
           minimum: Spacing.medium.all,
           child: Column(
             children: [
-              DetailsHeader(stock: stock),
-              Expanded(child: ListView()),
+              Header(stock: stock),
+              Expanded(
+                child: ListView.separated(
+                  itemCount: stock.criterias.length,
+                  itemBuilder: (_, index) => Criteria(
+                    criteria: stock.criterias[index],
+                  ),
+                  separatorBuilder: (_, __) => Text(
+                    'and',
+                    style: context.bodySmall,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
