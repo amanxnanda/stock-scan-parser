@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 /// The default theme data.
 final kThemeData = ThemeData.dark().copyWith(
-  primaryColor: Colors.blue,
+  primaryColor: const Color.fromRGBO(24, 114, 160, 1),
   appBarTheme: const AppBarTheme(
     backgroundColor: Colors.white,
   ),
-  scaffoldBackgroundColor: Colors.white,
+  scaffoldBackgroundColor: Colors.black,
   colorScheme: ColorScheme.fromSwatch(
     accentColor: const Color(0xFF13B9FF),
   ),

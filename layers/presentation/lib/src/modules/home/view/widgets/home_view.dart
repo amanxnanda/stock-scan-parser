@@ -12,7 +12,6 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        backgroundColor: Colors.black,
         body: BlocBuilder<StocksCubit, StocksState>(
           buildWhen: (previous, current) => previous.runtimeType != current.runtimeType,
           builder: (context, state) {
