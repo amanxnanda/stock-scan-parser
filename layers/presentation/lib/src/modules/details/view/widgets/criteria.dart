@@ -35,7 +35,7 @@ class _CriteriaState extends State<Criteria> with domain.ParsingMixin {
               ),
       );
 
-  RichText _convert(BuildContext context) {
+  RichText _convertToText() {
     final children = <TextSpan>[];
 
     for (final word in parse(widget.criteria)) {
@@ -54,6 +54,6 @@ class _CriteriaState extends State<Criteria> with domain.ParsingMixin {
   @override
   Widget build(BuildContext context) => Padding(
         padding: Spacing.small.y,
-        child: _convert(context),
+        child: _convertToText(),
       );
 }
