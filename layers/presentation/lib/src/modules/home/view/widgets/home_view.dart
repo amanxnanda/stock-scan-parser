@@ -16,13 +16,13 @@ class HomeView extends StatelessWidget {
         body: BlocBuilder<StocksBloc, StocksState>(
           buildWhen: (previous, current) => previous.runtimeType != current.runtimeType,
           builder: (context, state) {
-            if (state is StocksInitial) {
-              return const LoadingWidget();
+            if (state is StocksLoaded) {
+              return HomeBody(stocks: state.stocks);
             } else if (state is StocksError) {
               return ErrorView(message: state.message);
             }
 
-            return const HomeBody();
+            return const LoadingWidget();
           },
         ),
       );
