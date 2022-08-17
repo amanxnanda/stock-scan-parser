@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:go_router/go_router.dart';
+import 'package:stock_scan_domain/domain.dart';
 import 'package:stock_scan_presentation/presentation.dart';
 
 /// {@template router}
@@ -13,6 +14,15 @@ final GoRouter router = GoRouter(
       name: RouteNames.root,
       path: '/',
       builder: (_, __) => const HomePage(),
+      routes: [
+        GoRoute(
+          name: RouteNames.details,
+          path: 'details/:name',
+          builder: (_, state) => DetailsView(
+            stock: state.extra! as Stock,
+          ),
+        ),
+      ],
     ),
   ],
 );

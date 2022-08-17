@@ -4,4 +4,7 @@ class RouteNames {
 
   /// The route name of the root screen.
   static const String root = 'root';
+
+  /// The route name of the details screen.
+  static const String details = 'details';
 }
