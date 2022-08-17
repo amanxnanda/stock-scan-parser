@@ -29,7 +29,7 @@ class _CriteriaState extends State<Criteria> with domain.ParsingMixin {
           color: context.primaryColor,
         ),
         recognizer: TapGestureRecognizer()
-          ..onTap = () => context.goNamed(
+          ..onTap = () => context.pushNamed(
                 RouteNames.variables,
                 extra: variable,
               ),

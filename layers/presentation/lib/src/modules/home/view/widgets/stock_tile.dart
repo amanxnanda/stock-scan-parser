@@ -17,13 +17,7 @@ class StockTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) => InkWell(
         borderRadius: const BorderRadius.all(Radius.circular(10)),
-        onTap: () => context.goNamed(
-          RouteNames.details,
-          params: {
-            'name': stock.name,
-          },
-          extra: stock,
-        ),
+        onTap: () => context.goNamed(RouteNames.details, extra: stock),
         child: Padding(
           padding: Spacing.medium.x + Spacing.small.y,
           child: Column(
