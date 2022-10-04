@@ -10,7 +10,7 @@ Stock Scan Parser
 
 ---
 
-## Getting Started 🚀
+### Getting Started 🚀
 
 This project contains 2 flavors:
 
